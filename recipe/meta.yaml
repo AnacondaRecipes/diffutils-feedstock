@@ -1,6 +1,5 @@
 {% set name = "diffutils" %}
-{% set version = "3.11" %}
-{% set sha256 = "a73ef05fe37dd585f7d87068e4a0639760419f810138bd75c61ddaa1f9e2131e" %}
+{% set version = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
-  sha256: {{ sha256 }}
+  sha256: 712868adfcc541c7f26245d766343d74d1dc5006ea768c9cff8879899ad78424
 
 build:
   number: 0
@@ -31,10 +30,21 @@ test:
 
 about:
   home: https://www.gnu.org/software/diffutils/
-  license: GPL-3.0-or-later
-  license_file: COPYING
   summary: GNU Diffutils is a package of several programs related to finding differences between files.
-
+  license: GPL-3.0-or-later
+  license_family: GPL3
+  license_file: COPYING
+  description: You can use the diff command to show differences between two files, or each corresponding file in two directories.
+    diff outputs differences between files line by line in any of several formats, selectable by command line options.
+    This set of differences is often called a “diff” or “patch”. For files that are identical, 
+    diff normally produces no output; for binary (non-text) files, diff normally reports only that they are different.
+    You can use the cmp command to show the offsets and line numbers where two files differ. 
+    cmp can also show all the characters that differ between the two files, side by side.
+    You can use the diff3 command to show differences among three files. 
+    When two people have made independent changes to a common original, 
+    diff3 can report the differences between the original and the two changed versions, 
+    and can produce a merged file that contains both persons' changes together with warnings about conflicts.
+    You can use the sdiff command to merge two files interactively.
   doc_url: https://www.gnu.org/software/diffutils/manual/html_node/index.html
   dev_url: http://git.savannah.gnu.org/cgit/diffutils.git
 
