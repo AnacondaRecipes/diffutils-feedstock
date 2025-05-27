@@ -55,3 +55,5 @@ extra:
   skip-lints:
   # http_url: http://ftp.gnu.org/gnu/diffutils/diffutils-3.12.tar.xz is not https
   - http_url
+  # unstable GNU website
+  - invalid_url
