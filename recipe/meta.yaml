@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
-  sha256: 712868adfcc541c7f26245d766343d74d1dc5006ea768c9cff8879899ad78424
+  url: https://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
+  sha256: 7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd
 
 build:
   number: 0
@@ -16,10 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib('c') }}
     - make
-  host:
-    - libiconv
 
 test:
   commands:
@@ -46,12 +43,8 @@ about:
     and can produce a merged file that contains both persons' changes together with warnings about conflicts.
     You can use the sdiff command to merge two files interactively.
   doc_url: https://www.gnu.org/software/diffutils/manual/html_node/index.html
-  dev_url: http://git.savannah.gnu.org/cgit/diffutils.git
+  dev_url: https://cgit.git.savannah.gnu.org/cgit/diffutils.git
 
 extra:
   recipe-maintainers:
-    - bgruening
-    - beatrizserrano
-    - danielnachun
-    - davelopez
-    - traversaro
+    - PatrykKups
