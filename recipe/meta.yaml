@@ -7,7 +7,7 @@ package:
 
 source:
   # https://cgit.git.savannah.gnu.org/cgit/diffutils.git/snapshot/diffutils-x.xx.tar.gz 
-  # cannot be used as the upstream source because sources don't contain a ./configure file.
+  # 'https' cannot be used as the upstream source because cgit sources don't contain a ./configure file.
   # generating ./configure file using ./bootstrap is hard due to missing dependencies
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
   sha256: 7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd
