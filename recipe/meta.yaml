@@ -17,6 +17,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
+  host:
+    - libiconv
+  run:
+    - libiconv
 
 test:
   commands:
