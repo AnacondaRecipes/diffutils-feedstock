@@ -6,7 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
+  # https://cgit.git.savannah.gnu.org/cgit/diffutils.git/snapshot/diffutils-x.xx.tar.gz 
+  # cannot be used as the upstream source because sources don't contain a ./configure file.
+  # generating ./configure file using ./bootstrap is hard due to missing dependencies
+  url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.xz
   sha256: 7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd
 
 build:
@@ -57,5 +60,7 @@ extra:
     - davelopez
     - traversaro
   skip-lints:
+  # http_url: http://ftp.gnu.org/gnu/diffutils/diffutils-3.12.tar.xz is not https
+  - http_url
   # unstable GNU website
   - invalid_url
