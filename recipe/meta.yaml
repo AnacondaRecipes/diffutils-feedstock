@@ -21,9 +21,9 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
-    - libiconv
+    - gettext
   run:
-    - libiconv
+    - gettext
 
 test:
   commands:
